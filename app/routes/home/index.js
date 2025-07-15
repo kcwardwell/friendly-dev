@@ -1,4 +1,6 @@
-import type { Route } from "./+types/home";
+import { Route } from "./+types/index"; // Uncomment if you need Route for runtime usage
+
+
 
 
 export function meta({}: Route.MetaArgs) {
