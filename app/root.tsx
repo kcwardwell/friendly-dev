@@ -9,6 +9,14 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
+import Navbar from "./components/Navbar";
+
+export function meta({}: Route.MetaArgs) {
+  return [
+    { title: "The Friendly Developer" },
+    { name: "description", content: "Welcome to React Router!" },
+  ];
+}
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -33,7 +41,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
+        <Navbar />
+        <main >
+           {children}
+        </main>
+       
         <ScrollRestoration />
         <Scripts />
       </body>
