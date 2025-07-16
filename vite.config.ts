@@ -8,6 +8,10 @@ export default defineConfig({
   plugins: [tailwindcss(), reactRouter(), tsconfigPaths(), devtoolJson()],
   server: {
     port: 3000,
+    hmr: {
+      overlay: true
+    }
   },
+
 });
 

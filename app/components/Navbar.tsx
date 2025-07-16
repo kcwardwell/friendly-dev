@@ -58,7 +58,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(!menuOpen)}
               className="text-blue-400 text-xl"
               title="Menu"
-              cursor-pointer
+              // cursor-pointer
             >
               {menuOpen ? <FaTimes /> : <FaBars />}
             </button>
